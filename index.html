@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our 2 Years 9 Months ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f5);
+    color: #5a3040;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 60px 20px;
+}
+
+.heart {
+    font-size: 70px;
+    animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+h1 {
+    font-size: 38px;
+    margin: 20px 0 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    max-width: 650px;
+    margin: auto;
+    background: rgba(255,255,255,0.8);
+    padding: 35px 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.counter {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 30px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #ff6f9f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #ff4f8b;
+}
+
+.message {
+    display: none;
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 25px;
+    animation: float 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">❤️</div>
+
+    <h1>Happy 2 Years & 9 Months</h1>
+
+    <div class="subtitle">
+        Our Love Story 💕
+    </div>
+
+    <div class="card">
+
+        <h2>To My Favorite Person 💗</h2>
+
+        <p>
+            Today is another beautiful milestone of our love.
+            We have been together for
+            <b>2 Years and 9 Months</b>.
+        </p>
+
+        <p>
+            Thank you for staying beside me,
+            for understanding me,
+            and for making my days brighter.
+            Every moment with you is a precious memory.
+        </p>
+
+        <div class="counter">
+            2 Years ❤️ 9 Months ❤️
+        </div>
+
+        <button onclick="showMessage()">
+            Open My Message 💌
+        </button>
+
+        <div class="message" id="message">
+            I may not always say it perfectly,
+            but you mean so much to me. ❤️
+            <br><br>
+            Thank you for being part of my life.
+            Let's create many more beautiful memories together.
+            <br><br>
+            Happy 2 Years 9 Months Anniversary! 💕
+            <br>
+            I love you ❤️
+        </div>
+
+    </div>
+
+    <footer>
+        Made with ❤️ for our special day
+    </footer>
+
+</div>
+
+<script>
+
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+}
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("floating-heart");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 700);
+
+</script>
+
+</body>
+</html> 
